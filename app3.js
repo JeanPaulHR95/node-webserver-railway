@@ -28,7 +28,12 @@ app3.get('/generic', (req, res)=>{
         titulo: 'Curso Node, Cero a Experto'
     });
 })
-
+app3.get('/salidas', (req, res)=>{
+    res.render('salidas',{//son los argumentos
+        nombre: ' Jean Paul',
+        titulo: 'Curso Node, Cero a Experto'
+    });
+})
 app3.get('*', (req, res)=>{
     res.sendFile(__dirname+'/public/404.html');
 })
